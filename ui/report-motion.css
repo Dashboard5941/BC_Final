@@ -1,0 +1,13 @@
+/* Stable geometry, restrained movement, no infinite or table-wide animations. */
+button,a,input,select{ -webkit-tap-highlight-color:transparent }
+button,.navitem,.tab,.subbtn{transition:background-color .16s ease,border-color .16s ease,color .16s ease,box-shadow .16s ease}
+button:active:not(:disabled){transform:translateY(1px)}
+button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,[tabindex]:focus-visible{outline:2px solid #22a58e;outline-offset:3px}
+.panel,.card{transition:border-color .18s ease,box-shadow .18s ease}
+@media(hover:hover){.panel:hover,.card:hover{border-color:#bcdad3}tbody tr{transition:background-color .12s ease}}
+.toast{animation:hng-toast-in .2s ease-out}
+.modalLayer.open .modal,.modalback.open .modal,.modalbg.open .modal,.overlay.open>*,.drawerbg.open .drawer,.drawerback.open .drawer,.drawerLayer.open .drawer{animation:hng-dialog-in .23s cubic-bezier(.2,.7,.2,1)}
+@keyframes hng-toast-in{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:translateY(0)}}
+@keyframes hng-dialog-in{from{opacity:.5;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}button:active:not(:disabled){transform:none}}
+@media print{*,*::before,*::after{animation:none!important;transition:none!important}}
