@@ -19,3 +19,13 @@ Rebuild the standalone reporting HTML after changing the medication workflow:
 ```sh
 python3 ui/build-medication.py
 ```
+
+Area performance and temperature scope checks:
+
+```sh
+node tests/performance-temperature.cjs
+```
+
+These use synthetic data by default. Optional `ZONE_FIXTURE` and `TEMP_FIXTURE` point to read-only, local snapshots for checking against live source values. The checks cover source loading, the seven whole-flock measures, weighted area totals, missing data, historical cutoffs, CSV export, and temperature range/day/latest-date behavior.
+
+Rebuild these two modules with `python3 ui/build-performance.py`.
